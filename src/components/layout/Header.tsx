@@ -41,14 +41,16 @@ export const Header = () => {
                 <Link href="/" className="group flex items-center gap-2">
                     <motion.div
                         whileHover={{ rotate: 10, scale: 1.1 }}
-                        className="bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary-yellow)] flex items-center justify-center text-white font-bold text-xl shadow-md"
+                        className="bg-gradient-to-tr flex items-center justify-center text-white font-bold text-xl 
+    border-b-4 border-r-4 border-black/60
+    shadow-[3px_3px_0px_rgba(0,0,0,0.35)]"
                     >
                         <Image
-                            src="/logo.png"   // put logo inside /public
+                            src="/logo1.png"   // put logo inside /public
                             alt="Natraj Events Logo"
                             width={32}
                             height={32}
-                            priority
+
                         />
                     </motion.div>
                     <span className="text-2xl font-bold font-header text-gradient group-hover:opacity-80 transition-opacity">

@@ -7,7 +7,7 @@ import { Star } from 'lucide-react';
 const testimonials = [
     {
         id: 1,
-        name: "Emily Thompson",
+        name: "Ashwani Ekka",
         role: "Bride",
         content: "Natraj Events made our wedding absolutely magical. Every detail was perfect, and the team was so supportive!",
         rating: 5,
@@ -15,7 +15,7 @@ const testimonials = [
     },
     {
         id: 2,
-        name: "Mark Davidson",
+        name: "Simpi Sharma",
         role: "Director, TechCorp",
         content: "The most professional event planners we've worked with. Our annual summit was a huge success thanks to them.",
         rating: 5,

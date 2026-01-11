@@ -8,30 +8,30 @@ import { Button } from '@/components/ui/Button';
 const projects = [
     {
         id: 1,
-        title: 'Neon Nights Music Fest',
+        title: 'Chhath Pooja Dhurwa Dam',
         category: 'Festival',
-        image: 'https://images.unsplash.com/photo-1459749411177-0473ef716175?auto=format&fit=crop&q=80',
+        image: 'https://images.herzindagi.info/her-zindagi-english/images/2025/10/23/article/image/Main---2025-10-23T134641.851-1761207478712.webp',
         size: 'col-span-1 md:col-span-2 row-span-2',
     },
     {
         id: 2,
         title: 'Sarah & Mike',
         category: 'Wedding',
-        image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80',
+        image: 'Indian-Wedding-Trends-2025-3.webp',
         size: 'col-span-1',
     },
     {
         id: 3,
-        title: 'Tech Summit 2024',
-        category: 'Corporate',
-        image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80',
+        title: 'School Function SVS',
+        category: 'Functions',
+        image: 'Gemini_Generated_Image_bns15ibns15ibns1.png',
         size: 'col-span-1',
     },
     {
         id: 4,
         title: 'Golden Jubilee',
         category: 'Private Party',
-        image: 'https://images.unsplash.com/photo-1530103862676-de3c9da59af7?auto=format&fit=crop&q=80',
+        image: 'pngtree-indian-wedding-mandap-decor-yellow-and-white-flowers-picture-image_15566633.jpg',
         size: 'col-span-1 md:col-span-2',
     },
 ];
@@ -61,7 +61,7 @@ export const PortfolioSection = () => {
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
                                 <span className="text-sm font-medium text-[var(--primary)] mb-1">{project.category}</span>
