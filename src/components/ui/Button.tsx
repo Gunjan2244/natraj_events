@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, HTMLMotionProps } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import clsx from 'clsx';
 import { ClassValue } from 'clsx';
@@ -12,7 +12,7 @@ import { twMerge } from 'tailwind-merge';
 // Wait, I created lib/utils.ts folder but not file. I should make the utils file first.
 // I'll assume I will make it next tool call. I'll write the imports assuming it exists.
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends HTMLMotionProps<"button"> {
     variant?: 'primary' | 'secondary' | 'accent' | 'outline' | 'ghost';
     size?: 'sm' | 'md' | 'lg';
     isLoading?: boolean;
@@ -51,7 +51,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 {isLoading ? (
                     <span className="mr-2 animate-spin">⏳</span> // Replace with proper icon later
                 ) : null}
-                {children}
+                {children as React.ReactNode}
             </motion.button>
         );
     }

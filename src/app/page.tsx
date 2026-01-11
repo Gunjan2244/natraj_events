@@ -1,18 +1,23 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/home/Hero';
+import { ServicesSection } from '@/components/home/ServicesSection';
+import { ProcessSection } from '@/components/home/ProcessSection';
+import { PortfolioSection } from '@/components/home/PortfolioSection';
+import { TestimonialsSection } from '@/components/home/TestimonialsSection';
+import { CTASection } from '@/components/home/CTASection';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[var(--background)]">
       <Header />
       <Hero />
+      <ServicesSection />
+      <PortfolioSection />
+      <ProcessSection />
+      <TestimonialsSection />
+      <CTASection />
 
-      {/* Temporary Placeholder for other sections */}
-      <section className="py-20 text-center container-custom">
-        <h2 className="text-4xl font-bold mb-8">Our Services</h2>
-        <p className="text-xl text-gray-600">Coming Soon: Interactive Service Cards</p>
-      </section>
 
       <Footer />
     </main>

@@ -27,13 +27,26 @@ export const Header = () => {
     }, []);
 
     return (
-        <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+        <motion.header
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+                ? 'bg-white/70 backdrop-blur-lg shadow-lg border-b border-white/20 py-3'
+                : 'bg-transparent py-6'
                 }`}
         >
             <div className="container-custom flex items-center justify-between">
-                <Link href="/" className="text-2xl font-bold font-header text-gradient">
-                    Natraj Events
+                <Link href="/" className="group flex items-center gap-2">
+                    <motion.div
+                        whileHover={{ rotate: 10, scale: 1.1 }}
+                        className="w-10 h-10 rounded-full bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary-yellow)] flex items-center justify-center text-white font-bold text-xl shadow-md"
+                    >
+                        N
+                    </motion.div>
+                    <span className="text-2xl font-bold font-header text-gradient group-hover:opacity-80 transition-opacity">
+                        Natraj Events
+                    </span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -42,23 +55,30 @@ export const Header = () => {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="font-medium hover:text-[var(--primary)] transition-colors"
+                            className="font-medium hover:text-[var(--primary)] transition-colors relative group"
                         >
                             {link.name}
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary)] transition-all group-hover:w-full" />
                         </Link>
                     ))}
-                    <Button size="sm">Plan Your Event</Button>
+                    <Button
+                        size="sm"
+                        className="shadow-lg shadow-red-500/30 hover:shadow-red-500/50"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        Plan Your Event
+                    </Button>
                 </nav>
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden text-gray-700"
+                    className="md:hidden text-gray-700 p-2 rounded-full hover:bg-gray-100 transition-colors"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
             </div>
-
             {/* Mobile Menu */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
@@ -84,6 +104,6 @@ export const Header = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </header>
+        </motion.header>
     );
 };

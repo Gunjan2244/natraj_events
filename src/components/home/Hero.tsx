@@ -40,9 +40,15 @@ export const Hero = () => {
 
                     <div className="mt-12 flex items-center gap-8">
                         <div className="flex -space-x-4">
-                            {/* Placeholders for avatars */}
-                            {[1, 2, 3, 4].map(i => (
-                                <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center text-xs">?</div>
+                            {[
+                                'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100',
+                                'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100&h=100',
+                                'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100',
+                                'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100'
+                            ].map((src, i) => (
+                                <div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden shadow-md">
+                                    <img src={src} alt="Client" className="w-full h-full object-cover" />
+                                </div>
                             ))}
                         </div>
                         <div>
@@ -58,27 +64,29 @@ export const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="relative h-[600px] hidden md:block"
                 >
-                    {/* Abstract visual or Image placeholder */}
+                    {/* Main Visual */}
                     <div className="relative w-full h-full">
                         {/* Main Image Container */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-orange-300 to-pink-300 rounded-[40px] rotate-3 opacity-20" />
-                        <div className="absolute inset-0 bg-gray-200 rounded-[40px] overflow-hidden shadow-2xl">
-                            {/* Replace with actual image later */}
-                            <div className="w-full h-full flex items-center justify-center bg-gray-100 text-gray-400">
-                                Image Placeholder
-                            </div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-orange-300 to-pink-300 rounded-[40px] rotate-3 opacity-20 animate-pulse" />
+                        <div className="absolute inset-0 bg-gray-200 rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+                            <img
+                                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop"
+                                alt="Joyful Celebration"
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                         </div>
 
                         {/* Floating Cards */}
                         <motion.div
                             animate={{ y: [0, -20, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute top-10 -left-10 bg-white p-4 rounded-2xl shadow-xl max-w-[200px]"
+                            className="absolute top-10 -left-10 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl max-w-[200px] border border-white/50"
                         >
                             <div className="flex items-center gap-3 mb-2">
-                                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">🎉</div>
+                                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-xl">🎉</div>
                                 <div>
-                                    <p className="font-bold text-sm">Perfect Execution</p>
+                                    <p className="font-bold text-sm text-gray-800">Perfect Execution</p>
                                     <p className="text-xs text-gray-500">Every detail matters</p>
                                 </div>
                             </div>
@@ -87,11 +95,14 @@ export const Hero = () => {
                         <motion.div
                             animate={{ y: [0, 20, 0] }}
                             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                            className="absolute bottom-20 -right-5 bg-white p-4 rounded-2xl shadow-xl"
+                            className="absolute bottom-20 -right-5 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50"
                         >
                             <div className="flex items-center gap-2">
-                                <div className="text-yellow-500">★★★★★</div>
-                                <p className="font-bold">98% Satisfaction</p>
+                                <div className="text-yellow-500 text-xl">★★★★★</div>
+                                <div>
+                                    <p className="font-bold text-sm text-gray-800">98% Satisfaction</p>
+                                    <p className="text-xs text-gray-500">From 500+ clients</p>
+                                </div>
                             </div>
                         </motion.div>
                     </div>
