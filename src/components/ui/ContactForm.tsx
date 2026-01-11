@@ -21,14 +21,26 @@ export const ContactForm = () => {
     const [isSuccess, setIsSuccess] = useState(false);
 
     const onSubmit = async (data: FormData) => {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        console.log(data);
-        setIsSuccess(true);
-        reset();
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
 
-        // Reset success message after 5 seconds
-        setTimeout(() => setIsSuccess(false), 5000);
+            if (response.ok) {
+                setIsSuccess(true);
+                reset();
+                setTimeout(() => setIsSuccess(false), 5000);
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('Something went wrong. Please try again.');
+        }
     };
 
     return (

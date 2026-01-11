@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
 
@@ -30,9 +31,11 @@ export const Hero = () => {
                         From intimate weddings to grand corporate festivals, we turn your wildest ideas into magical memories.
                     </p>
                     <div className="flex flex-wrap gap-4">
-                        <Button size="lg" className="shadow-xl shadow-red-200">
-                            Plan Your Event
-                        </Button>
+                        <Link href="/contact">
+                            <Button size="lg" className="shadow-xl shadow-red-200">
+                                Plan Your Event
+                            </Button>
+                        </Link>
                         <Button variant="outline" size="lg">
                             View Our Work
                         </Button>
@@ -41,10 +44,10 @@ export const Hero = () => {
                     <div className="mt-12 flex items-center gap-8">
                         <div className="flex -space-x-4">
                             {[
-                                'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100',
-                                'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100&h=100',
-                                'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100',
-                                'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100&h=100'
+                                'https://plus.unsplash.com/premium_photo-1681483544221-e04d719060ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluZGlhbiUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D',
+                                'https://images.unsplash.com/flagged/photo-1571367032928-3034d979fac1?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                                'https://plus.unsplash.com/premium_photo-1682092039530-584ae1d9da7f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW5kaWFuJTIwcGVvcGxlfGVufDB8fDB8fHww',
+                                'https://images.unsplash.com/photo-1729157661483-ed21901ed892?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWFuJTIwbWFufGVufDB8fDB8fHww'
                             ].map((src, i) => (
                                 <div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden shadow-md">
                                     <img src={src} alt="Client" className="w-full h-full object-cover" />
@@ -70,7 +73,7 @@ export const Hero = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-orange-300 to-pink-300 rounded-[40px] rotate-3 opacity-20 animate-pulse" />
                         <div className="absolute inset-0 bg-gray-200 rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
                             <img
-                                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop"
+                                src="Screenshot from 2026-01-11 10-53-25.png"
                                 alt="Joyful Celebration"
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                             />

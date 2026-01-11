@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
@@ -40,9 +41,15 @@ export const Header = () => {
                 <Link href="/" className="group flex items-center gap-2">
                     <motion.div
                         whileHover={{ rotate: 10, scale: 1.1 }}
-                        className="w-10 h-10 rounded-full bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary-yellow)] flex items-center justify-center text-white font-bold text-xl shadow-md"
+                        className="bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary-yellow)] flex items-center justify-center text-white font-bold text-xl shadow-md"
                     >
-                        N
+                        <Image
+                            src="/logo.png"   // put logo inside /public
+                            alt="Natraj Events Logo"
+                            width={32}
+                            height={32}
+                            priority
+                        />
                     </motion.div>
                     <span className="text-2xl font-bold font-header text-gradient group-hover:opacity-80 transition-opacity">
                         Natraj Events
@@ -61,14 +68,16 @@ export const Header = () => {
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary)] transition-all group-hover:w-full" />
                         </Link>
                     ))}
-                    <Button
-                        size="sm"
-                        className="shadow-lg shadow-red-500/30 hover:shadow-red-500/50"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        Plan Your Event
-                    </Button>
+                    <Link href="/contact">
+                        <Button
+                            size="sm"
+                            className="shadow-lg shadow-red-500/30 hover:shadow-red-500/50"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Plan Your Event
+                        </Button>
+                    </Link>
                 </nav>
 
                 {/* Mobile Toggle */}
@@ -99,7 +108,9 @@ export const Header = () => {
                                     {link.name}
                                 </Link>
                             ))}
-                            <Button className="w-full">Plan Your Event</Button>
+                            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                                <Button className="w-full">Plan Your Event</Button>
+                            </Link>
                         </div>
                     </motion.div>
                 )}
