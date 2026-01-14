@@ -59,13 +59,13 @@ export const Footer = () => {
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-pink-400 group-hover:bg-pink-500 group-hover:text-white transition-colors">
                                 <Phone size={18} />
                             </div>
-                            <span className="group-hover:text-white transition-colors">+91 98765 43210</span>
+                            <span className="group-hover:text-white transition-colors">+91 93041 13120</span>
                         </li>
                         <li className="flex items-center gap-4 group">
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-pink-400 group-hover:bg-pink-500 group-hover:text-white transition-colors">
                                 <Mail size={18} />
                             </div>
-                            <span className="group-hover:text-white transition-colors">hello@natrajevents.com</span>
+                            <span className="group-hover:text-white transition-colors">natrajevents24@gmail.com</span>
                         </li>
                         <li className="flex items-start gap-4 group">
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-pink-400 group-hover:bg-pink-500 group-hover:text-white transition-colors">

@@ -31,8 +31,8 @@ export default function ContactPage() {
                             <div className="relative z-10">
                                 <h3 className="text-2xl font-bold mb-4">Need Help?</h3>
                                 <p className="mb-6 opacity-90">Call our support team directly for urgent inquiries.</p>
-                                <a href="tel:+919876543210" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
-                                    +91 98765 43210
+                                <a href="tel:+919304113120" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
+                                    +91 9304113120
                                 </a>
                             </div>
                             {/* Decor */}
