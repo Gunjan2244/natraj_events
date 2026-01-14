@@ -191,7 +191,7 @@ export async function POST(req: Request) {
         // Send Admin Email
         await transporter.sendMail({
             from: '"Natraj Events Website" <no-reply@natrajevents.com>',
-            to: 'akash22rocks@gmail.com',
+            to: 'livekishan43@gmail.com',
             subject: `✨ New Inquiry: ${eventType} by ${name}`,
             html: adminHtmlContent,
         });
