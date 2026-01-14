@@ -6,8 +6,8 @@ import { Footer } from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
 
 const team = [
-    { name: 'Priya Sharma', role: 'Founder & Visionary', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80', funFact: 'Loves confetti cannons more than coffee.' },
-    { name: 'Rahul Verma', role: 'Head of Design & Co-Founder', image: '/images/founder.png', funFact: 'Owns 50+ patterned bowties.' },
+    { name: 'Kisan Prajapati', role: 'Founder & Visionary', image: '/images/founder.png', funFact: 'Owns the brand.' },
+    { name: 'Priya Sharma', role: 'Head of Design & Co-Founder', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80', funFact: 'Loves confetti cannons more than coffee.' },
     { name: 'Sonia Lee', role: 'Lead Coordinator', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80', funFact: 'Can organize a chaotic room in 5 mins.' },
     { name: 'Arjun Das', role: 'Tech Logistics', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80', funFact: 'Gamer by night, lighting wizard by day.' }
 ];
